@@ -14,25 +14,19 @@ class Main {
      System.out.println("Podaj 3 liczbe");
      int l3 = liczba3.nextInt();
 
-    if(l1>l2)
+    double max=0;
+    if(l1>l2 && l1>l3)
     {
-      l2=l3;
-      if(l1>l2)
-      {
-        System.out.println(l1);
-      }
-      else
-      {
-        l1=l2;
-        if(l1>l3)
-        {
-          System.out.println(l1);
-        }
-        else
-        {
-          System.out.println(l3);
-        }
-      }
+      max=l1;
     }
+    else if(l2>l1 && l2>l3)
+    {
+      max=l2;
+    }
+    else if(l3>l1 && l3>l2)
+    {
+      max=l3;
+    }
+    System.out.println(max);
   }
 }
